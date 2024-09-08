@@ -377,12 +377,7 @@ h3 {
 }
 
 /* ----- ABOUT INFO ----- */
-:root {
-  --first-color: #007bff;
-  --first-color-hover: #0056b3;
-  --color-white: #ffffff;
-  --first-shadow-color: rgba(0, 0, 0, 0.1);
-}
+
 
 .top-header h1 {
   text-align: center;
@@ -417,28 +412,30 @@ h3 {
 }
 
 .summary h2 {
-  font-size: 18px;
+  font-size: 20px;
   /* text-align: center; */
+  /* color: var(--text-color-third) !important; */
   margin-bottom: 8px;
 }
 .education {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .education h2 {
-  color: var(--first-color);
-  margin-bottom: 6px;
-  font-size: 20px;
+    /* color: var() !important; */
+    margin-bottom: 6px;
 }
 
 .education h3 {
-  color: #333;
+  color: #272727;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .education p {
   margin-bottom: 5px;
+  color: #1b1b1bad;
+
   font-size: 14px;
 }
 
@@ -456,10 +453,25 @@ h3 {
   align-self: flex-end;
 }
 
+.present{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.present span{
+    background: var(--second-color);
+    font-size: 14px;
+ border-radius: 15px;
+ padding: 0 10px;
+ /* padding-left: 18px; */
 
-.summary h2 {
-  color: var(--first-color);
+}
+
+.summary,.education h2 {
+    color: var(--third-color) !important;
+    font-size: 20px;
+
 }
 .summary,
 .education {
@@ -474,7 +486,7 @@ h3 {
 }
 
 .experience-info h2 {
-  color: var(--first-color);
+    color: var(--third-color) !important;
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -483,6 +495,10 @@ h3 {
   /* color: var(--first-color); */
   margin-bottom: 5px;
   font-size: 18px;
+}
+
+.SV{
+    margin-top: 1rem;
 }
 
 .experience-item .company {
@@ -542,6 +558,8 @@ h3 {
   max-width: 1000px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   max-height: calc(100vh - 150px); /* Adjust based on your header size */
 }
@@ -566,11 +584,15 @@ h3 {
   flex: 1;
   overflow-y: auto;
   padding-right: 10px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
 }
 
 .achievement-details h3 {
   color: #333;
-  margin-bottom: 10px;
+margin-bottom: 0 !important;
   font-size: 1.8rem;
 }
 
@@ -764,6 +786,8 @@ h3 {
   /* background-color: #f0f0f0; */
 }
 
+
+
 .project-container {
   display: flex;
   flex-wrap: wrap;
@@ -809,6 +833,7 @@ h3 {
   display: flex;
   justify-content: center;
   padding: 0 15px 15px;
+  padding-top: 1rem;
   gap: 10px;
 }
 
@@ -1058,6 +1083,37 @@ footer{
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px) {
+    .container {
+        width: 100%;
+        /* padding: 0 !important; */
+
+        overflow-x: hidden;
+      }
+
+      .featured-text{
+
+        padding-top: 1rem;
+      }
+      .featured-text-info p {
+        font-size: 14px;
+        /* padding-top: 1rem; */
+      }
+
+      .achievement-details{
+        padding: 0;
+      }
+
+      .achievement-card{
+        padding: 10px;
+      }
+
+      .education h2{
+        font-size: 23px;
+      }
+
+      .education h3{
+        font-size: 16px;
+      }
     nav{
         height: 75px;
         line-height: 55px;
@@ -1165,6 +1221,18 @@ footer{
   .social-links > a i {
     font-size: 30px;
   }
+  .present{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    padding: 8px 0;
+}
+.present span{
+font-size: 10px;
+}
+
   .icon {
     width: 30px;
     height: 30px;
@@ -1177,7 +1245,7 @@ footer{
 @media screen and (max-width: 768px) {
     .container {
       width: 100%;
-      /* padding: 0 15px; */
+      /* padding: 0 10px; */
       overflow-x: hidden;
     }
   
@@ -1258,6 +1326,9 @@ footer{
   
   /* Additional adjustments for very small screens */
   @media screen and (max-width: 480px) {
+    .container{
+        padding: 0 !important;
+    }
     .skill-item {
       width: calc(50% - 20px);
     }

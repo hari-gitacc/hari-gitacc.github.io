@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preload" as="image" href="assets/images/avatar.png" />
     <!-- --------- ICONS ---------- -->
     <link
       rel="stylesheet"
@@ -19,7 +19,7 @@
     <!-- --------- FAVICON ---------- -->
     <link
       rel="shortcut icon"
-      href="assets/images/favicon.png"
+      href="assets/images/favicon_io (2)/favicon.ico"
       type="image/x-icon"
     />
 
@@ -82,9 +82,7 @@
             </div>
             <div class="featured-text-info">
               <p>
-                MERN Stack Developer building full-featured web applications
-                with expertise in front-end, back-end development, and API
-                integrations.
+                Self-taught Full Stack MERN Developer with extensive experience in front-end, back-end, and API integrations, I create scalable solutions that enhance user interaction and streamline operations.
               </p>
             </div>
             <div class="featured-text-btn">
@@ -98,16 +96,36 @@
             </div>
             <div class="social_icons">
               <div class="social_icons">
-                <a href="https://github.com/hari-gitacc" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <a
+                  href="https://github.com/hari-gitacc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link"
+                >
                   <div class="icon"><i class="uil uil-github-alt"></i></div>
                 </a>
-                <a href="https://www.linkedin.com/in/hari-prasanth-developer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <a
+                  href="https://www.linkedin.com/in/hari-prasanth-developer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link"
+                >
                   <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
                 </a>
-                <a href="https://medium.com/@harisrini777" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <a
+                  href="https://medium.com/@harisrini777"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link"
+                >
                   <div class="icon"><i class="fab fa-medium"></i></div>
                 </a>
-                <a href="https://www.frontendmentor.io/profile/hari-gitacc" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <a
+                  href="https://www.frontendmentor.io/profile/hari-gitacc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link"
+                >
                   <div class="icon">
                     <img src="./assets/images/fem.svg" alt="Frontend Mentor" />
                   </div>
@@ -117,7 +135,17 @@
           </div>
           <div class="featured-image" data-aos="fade-left">
             <div class="image">
-              <img src="assets/images/avatar.png" alt="avatar" />
+              <picture>
+                <source
+                  srcset="./assets/images/avatar.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/images/avatar.png"
+                  alt="avatar"
+                  loading="lazy"
+                />
+              </picture>
             </div>
           </div>
         </section>
@@ -135,11 +163,12 @@
                   <p>
                     As a MERN Stack Developer, I excel in React.js, Express.js,
                     MongoDB, and Mongoose. My adaptability extends beyond MERN,
-                    embracing diverse tech stacks. I leverage my full-stack
-                    experience and API integration expertise to deliver
-                    efficient solutions. Currently enhancing my skills in Data
-                    Structures and Algorithms, I continually evolve to tackle
-                    complex development challenges.
+                    embracing diverse tech stacks and I am always ready to adapt
+                    to any new technologies. I leverage my full-stack experience
+                    and API integration expertise to deliver efficient
+                    solutions. Currently enhancing my skills in Data Structures
+                    and Algorithms, I continually evolve to tackle complex
+                    development challenges with agility and precision.
                   </p>
                 </div>
                 <div class="education">
@@ -158,16 +187,17 @@
               <div class="experience-info">
                 <h2>My Experience</h2>
                 <div class="experience-item">
-                  <h3>Full Stack Developer (Part-Time)</h3>
-                  <p class="company">
-                    Tech Vaseegrah, Tanjore Present (5 months)
-                  </p>
+                  <div class="present">
+                    <h3>Full Stack Developer (Part-Time)</h3>
+                    <span>Present</span>
+                  </div>
+                  <p class="company">Tech Vaseegrah, Tanjore (5 months)</p>
                   <p class="description">
                     Developing web applications using MERN stack. Collaborating
                     on new features and optimizing performance.
                   </p>
                 </div>
-                <div class="experience-item">
+                <div class="experience-item SV">
                   <h3>Service Technician (Part-Time)</h3>
                   <p class="company">Service Point BSNL (1.5 years)</p>
                   <p class="description">
@@ -322,6 +352,30 @@
                 />
                 <p>Postman</p>
               </div>
+              <div class="skill-item" data-aos="fade-up" data-aos-delay="1200">
+                <img
+                  class="skill-img"
+                  src="./assets/images/github.png"
+                  alt=""
+                />
+                <p>Git</p>
+              </div>
+              <div class="skill-item" data-aos="fade-up" data-aos-delay="1250">
+                <img
+                  class="skill-img"
+                  src="./assets/images/claude.png"
+                  alt=""
+                />
+                <p>Claude</p>
+              </div>
+              <div class="skill-item" data-aos="fade-up" data-aos-delay="1300">
+                <img
+                  class="skill-img"
+                  src="./assets/images/gpt.jpg"
+                  alt=""
+                />
+                <p>Chat GPT</p>
+              </div>
             </div>
           </div>
         </section>
@@ -342,9 +396,7 @@
               <h3>Achiever Award Certification</h3>
               <p class="company">Tech Vaseegrah</p>
               <p class="description">
-                Received for successfully completing a project, demonstrating
-                exceptional skills and dedication in web development using the
-                MERN stack.
+                I received the Achiever Award at Tech Vaseegrah for my consistent and eager involvement in a challenging project utilizing PHP, Node.js, and React. My role contributed significantly to integrating diverse technologies and steering our team towards the effective delivery of innovative solutions.
               </p>
             </div>
           </div>
@@ -359,29 +411,58 @@
             <div class="project-card" data-aos="fade-up">
               <img src="assets/images/CCwebapp.jpg" alt="Project One" />
               <h3>Café Ordering Web Application</h3>
-              <p>Developed a full-featured web application for a café, enabling customers to order dishes from their tables, with features like inventory management, order tracking, and a dashboard. Integrated Google Pay API for secure payments and Firebase.</p>
+              <p>
+                Developed a full-featured web application for a café, enabling
+                customers to order dishes from their tables, with features like
+                inventory management, order tracking, and a dashboard.
+                Integrated Google Pay API for secure payments and Firebase.
+              </p>
               <div class="project-buttons">
-                <a href="https://cupids-corner-client.vercel.app/" class="btn">Live Demo</a>
+                <a href="https://cupids-corner-client.vercel.app/" class="btn"
+                  >Live Demo</a
+                >
               </div>
             </div>
             <div class="project-card" data-aos="fade-up">
               <img src="assets/images/spacetourism.jpg" alt="Project Two" />
               <h3>Space Tourism Web App</h3>
-              <p>A responsive frontend application built using React.js, Tailwind CSS, and Framer Motion. This project, based on a Frontend Mentor challenge, showcases early-stage skills in modern web development technologies and responsive design implementation.</p>
+              <p>
+                A responsive frontend application built using React.js, Tailwind
+                CSS, and Framer Motion. This project, based on a Frontend Mentor
+                challenge, showcases early-stage skills in modern web
+                development technologies and responsive design implementation.
+              </p>
               <div class="project-buttons">
-                <a href="https://github.com/hari-gitacc/frontendmentor-task6" class="btn">Github</a>
-                <a href="https://frontendmentor-task6-git-main-hari-prasanths-projects.vercel.app/" class="btn">Live Demo</a>
+                <a
+                  href="https://github.com/hari-gitacc/frontendmentor-task6"
+                  class="btn"
+                  >Github</a
+                >
+                <a
+                  href="https://frontendmentor-task6-git-main-hari-prasanths-projects.vercel.app/"
+                  class="btn"
+                  >Live Demo</a
+                >
               </div>
             </div>
             <div class="project-card" data-aos="fade-up">
               <img src="assets/images/dashboard.png" alt="Project Three" />
-              <h3>Integrating google pay API for seamless transaction </h3>
-             <p>Integrated Google Pay API without depending on other payment gateways,  and displaying daily transaction statistics with filtering options for easy tracking.</p>
+              <h3>Integrating google pay API for seamless transaction</h3>
+              <p>
+                Integrated Google Pay API without depending on other payment
+                gateways, and displaying daily transaction statistics with
+                filtering options for easy tracking.
+              </p>
             </div>
             <div class="project-card" data-aos="fade-up">
               <img src="assets/images/metagoogle.png" alt="Project Four" />
               <h3>Google and Meta API Integration</h3>
-              <p>Developed an automated system for Instagram and YouTube to respond to comments using the ChatGPT API and Meta & Google APIs for comment moderation. Gained valuable experience in OAuth 2.0 and Passport.js</p>
+              <p>
+                Developed an automated system for Instagram and YouTube to
+                respond to comments using the ChatGPT API and Meta & Google APIs
+                for comment moderation. Gained valuable experience in OAuth 2.0
+                and Passport.js
+              </p>
             </div>
           </div>
         </section>
@@ -419,16 +500,36 @@
           </div>
           <div class="footer-social-icons">
             <div class="social_icons">
-              <a href="https://github.com/hari-gitacc" target="_blank" rel="noopener noreferrer" class="icon-link">
+              <a
+                href="https://github.com/hari-gitacc"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-link"
+              >
                 <div class="icon"><i class="uil uil-github-alt"></i></div>
               </a>
-              <a href="https://www.linkedin.com/in/hari-prasanth-developer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="icon-link">
+              <a
+                href="https://www.linkedin.com/in/hari-prasanth-developer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-link"
+              >
                 <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
               </a>
-              <a href="https://medium.com/@harisrini777" target="_blank" rel="noopener noreferrer" class="icon-link">
+              <a
+                href="https://medium.com/@harisrini777"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-link"
+              >
                 <div class="icon"><i class="fab fa-medium"></i></div>
               </a>
-              <a href="https://www.frontendmentor.io/profile/hari-gitacc" target="_blank" rel="noopener noreferrer" class="icon-link">
+              <a
+                href="https://www.frontendmentor.io/profile/hari-gitacc"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-link"
+              >
                 <div class="icon">
                   <img src="./assets/images/fem.svg" alt="Frontend Mentor" />
                 </div>
@@ -440,8 +541,8 @@
           <div class="bottom-footer">
             <p>
               Copyright &copy;
-              <a href="#home" style="text-decoration: none">Hari Prasanth</a> - All
-              rights reserved
+              <a href="#home" style="text-decoration: none">Hari Prasanth</a> -
+              All rights reserved
             </p>
           </div>
         </section>
