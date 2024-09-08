@@ -271,7 +271,7 @@ nav {
 }
 .social_icons {
   display: flex;
-  margin-top: 5em;
+  margin-top: 2em;
   gap: 30px;
 }
 .icon {
@@ -384,24 +384,12 @@ h3 {
   --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* .top-header h1 {
+.top-header h1 {
   text-align: center;
-  margin-bottom: 30px;
-  color: var(--first-color);
-} */
-
-/* .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding-bottom: 1rem ;
 }
 
-.col {
-    flex: 1;
-    min-width: 300px;
-} */
+
 
 
 
@@ -424,22 +412,22 @@ h3 {
 .experience-info p {
   font-size: 14px;
   color: #777;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   /* text-align: center; */
 }
 
 .summary h2 {
   font-size: 18px;
   /* text-align: center; */
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .education {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .education h2 {
   color: var(--first-color);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-size: 20px;
 }
 
@@ -468,22 +456,14 @@ h3 {
   align-self: flex-end;
 }
 
-.about-btn button {
-  background: var(--first-color);
-  color: var(--color-white);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+
 
 .summary h2 {
   color: var(--first-color);
 }
 .summary,
 .education {
-  padding: 20px;
+  padding: 15px;
   border: 2px solid gray;
   /* background: var(--color-white); */
   /* box-shadow: 1px 8px 10px 2px var(--first-shadow-color); */
@@ -1039,9 +1019,7 @@ footer{
     align-content: flex-start;
     min-height: 60vh;
   }
-  .social_icons {
-    margin: 2em 0;
-  }
+ 
   .featured-image {
     order: 1;
     justify-content: center;
@@ -1082,12 +1060,14 @@ footer{
 @media only screen and (max-width: 540px) {
     nav{
         height: 75px;
-        line-height: 75px;
+        line-height: 55px;
     }
   .wrapper {
     padding: 0;
   }
-
+  .social_icons {
+    margin: 1em 0;
+  }
   .row {
     gap: 2rem;
     /* font-size: 16px; */
@@ -1190,3 +1170,95 @@ footer{
     height: 30px;
   }
 }
+
+/* Add these rules to your existing CSS file */
+
+/* General responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+      /* padding: 0 15px; */
+      overflow-x: hidden;
+    }
+  
+    .wrapper {
+      padding: 0;
+    }
+  
+    /* Header adjustments */
+    #header {
+      padding: 10px 15px;
+    }
+  
+
+  
+    /* Featured box adjustments */
+    .featured-box {
+      flex-direction: column;
+      /* padding: 20px 0; */
+    }
+  
+  
+  
+   
+  
+    /* About section adjustments */
+    .row {
+      flex-direction: column;
+    }
+  
+    .col {
+      width: 100%;
+      /* padding: 10px 0; */
+    }
+  
+    /* Skills section adjustments */
+    .skills-box {
+      /* padding: 10px; */
+    }
+  
+    .skills {
+      justify-content: center;
+    }
+  
+    .skill-item {
+      width: calc(33.333% - 20px);
+      /* margin: 10px; */
+    }
+  
+    /* Projects section adjustments */
+    .project-container {
+      flex-direction: column;
+    }
+  
+    .project-card {
+      width: 100%;
+      /* margin: 10px 0; */
+    }
+  
+    /* Contact section adjustments */
+    .contact-info {
+      flex-direction: column;
+    }
+  
+    .contact-item {
+      /* margin: 10px 0; */
+    }
+  
+    /* Footer adjustments */
+    .footer-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .footer_menu_list {
+      /* margin: 5px 10px; */
+    }
+  }
+  
+  /* Additional adjustments for very small screens */
+  @media screen and (max-width: 480px) {
+    .skill-item {
+      width: calc(50% - 20px);
+    }
+  }
