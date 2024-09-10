@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuBtn = document.querySelector('.nav-menu-btn i');
   const sections = document.querySelectorAll('section');
 
+  let lastScrollTop = 0;
+  const delta = 3;
+  const navbarHeight = header.offsetHeight;
+
   // Toggle menu function
   function toggleMenu() {
     navMenu.classList.toggle('responsive');
@@ -30,12 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Scroll event for header shadow and active link
+  // Scroll event for header shadow, active link, and headroom-like behavior
   function handleScroll() {
-    const scrollPosition = window.scrollY;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Headroom-like behavior
+    if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
+
+    if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+      // Scrolling down
+      header.style.top = `-${navbarHeight}px`;
+    } else {
+      // Scrolling up
+      header.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop;
 
     // Header shadow
-    if (scrollPosition > 50) {
+    if (scrollTop > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -45,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 100; // Adjust offset as needed
       const sectionBottom = sectionTop + section.offsetHeight;
-      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+      if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
         setActiveLink(section.id);
       }
     });
@@ -88,7 +105,35 @@ document.addEventListener('DOMContentLoaded', function() {
     backSpeed : 80,
     backDelay : 2000
  })
+ document.addEventListener('DOMContentLoaded', function() {
+  const scrollIconBox = document.querySelector('.scroll-icon-box');
+  
+  if (scrollIconBox) {
+      scrollIconBox.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default anchor behavior
+          this.style.display = 'none'; // Hide the element
+          
+          // Optionally, you can still perform the scroll action:
+          const aboutSection = document.getElementById('about');
+          if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+          }
+      });
+  }
+});
 
+// document.addEventListener('scroll', function() {
+//   var aboutSection = document.getElementById('about');
+//   var scrollButton = document.querySelector('.scroll-icon-box');
+//   var aboutRect = aboutSection.getBoundingClientRect();
+
+//   // Check if the top of the section is less than or equal to the window height
+//   if (aboutRect.top <= window.innerHeight) {
+//       scrollButton.style.display = 'none'; // Hide the button
+//   } else {
+//       scrollButton.style.display = 'block'; // Show the button if user scrolls up
+//   }
+// });
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
 //  const sr = ScrollReveal({
