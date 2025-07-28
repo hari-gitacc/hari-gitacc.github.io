@@ -688,7 +688,6 @@ margin-bottom: 0 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
 }
 
@@ -713,6 +712,8 @@ margin-bottom: 0 !important;
 .skill-item i {
   font-size: 40px;
 }
+
+
 
 .skill-img {
   display: flex;
