@@ -411,8 +411,17 @@
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18",
+        "react/jsx-runtime": "https://esm.sh/react@18/jsx-runtime",
+        "react/jsx-dev-runtime": "https://esm.sh/react@18/jsx-dev-runtime"
+      }
+    }
+  </script>
 
-  <script type="text/babel" data-presets="react">
+  <script type="text/babel" data-presets="react" data-type="module">
     const { useState, useEffect, useRef, useCallback } = React;
 
     /* ============== DATA (from résumé) ============== */
